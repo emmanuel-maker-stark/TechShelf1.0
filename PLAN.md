@@ -121,6 +121,7 @@ YouTube video-file downloads are excluded from v1. The YouTube API Services Deve
 - Expo + React Native + TypeScript, Expo Router, NativeWind.
 - Android native tabs via the SDK 57 Expo Router native-tabs entry point.
 - Use a persistent local database for anonymous data and a separate, account-scoped local cache/mirror for signed-in data. SQLite is the recommended local store because the app has related lists, playlist membership, ordering, and activity.
+- Initialize Clerk in the Android client with its publishable (public) key, supplied through Expo environment configuration. Never bundle Clerk’s secret key in the app; keep any server-only credentials in deployment secrets and out of Git.
 - Store auth tokens with Clerk’s supported secure storage integration.
 - Use Android share intents for inbound YouTube links and a normal paste action. Do not read the clipboard automatically in the background.
 - Use the official YouTube embedded player in the Android app. Build and test with a native development build; do not rely only on Expo Go for final playback verification.
